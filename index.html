@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KK Creations | Custom Personalized Gifts & Apparel</title>
+  <meta name="description" content="KK Creations - Custom personalized t-shirts, coffee mugs, tumblers, decals, hats, bags & more. Handcrafted with love using premium materials.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#fef2f2',
+              100: '#fee2e2',
+              200: '#fecaca',
+              300: '#fca5a5',
+              400: '#f87171',
+              500: '#dc2626',
+              600: '#b91c1c',
+              700: '#991b1b',
+              800: '#7f1d1d',
+              900: '#450a0a',
+            },
+            dark: {
+              50: '#f5f5f5',
+              100: '#e5e5e5',
+              200: '#d4d4d4',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#303030',
+              800: '#1a1a1a',
+              900: '#0d0d0d',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark-900 text-white font-body">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center space-x-3">
+          <!-- Replace src with your logo file -->
+          <img src="assets/logo.png" alt="KK Creations" class="h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="text-2xl font-display font-bold text-white hidden">KK <span class="text-primary-500">Creations</span></span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-white hover:text-primary-500 transition-colors font-medium">Home</a>
+          <a href="#about" class="nav-link text-white hover:text-primary-500 transition-colors font-medium">About</a>
+          <a href="#products" class="nav-link text-white hover:text-primary-500 transition-colors font-medium">Products</a>
+          <a href="#gallery" class="nav-link text-white hover:text-primary-500 transition-colors font-medium">Gallery</a>
+          <a href="#order" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30">Order Now</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-dark-800/95 backdrop-blur-md border-t border-dark-700">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#home" class="block text-white hover:text-primary-500 transition-colors py-2 font-medium">Home</a>
+        <a href="#about" class="block text-white hover:text-primary-500 transition-colors py-2 font-medium">About</a>
+        <a href="#products" class="block text-white hover:text-primary-500 transition-colors py-2 font-medium">Products</a>
+        <a href="#gallery" class="block text-white hover:text-primary-500 transition-colors py-2 font-medium">Gallery</a>
+        <a href="#order" class="block bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-full font-semibold text-center transition-all duration-300">Order Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900"></div>
+    <div class="hero-pattern absolute inset-0 opacity-5"></div>
+
+    <!-- Red Accent Glow -->
+    <div class="absolute top-1/4 -right-32 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 -left-32 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <!-- Logo Display -->
+      <div class="mb-8">
+        <img src="assets/logo-large.png" alt="KK Creations" class="h-32 md:h-40 mx-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="hidden">
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black">
+            KK <span class="text-primary-500">Creations</span>
+          </h1>
+        </div>
+      </div>
+
+      <p class="text-xl md:text-2xl text-dark-200 mb-4 font-light tracking-wide">Custom Personalized Gifts & Apparel</p>
+      <p class="text-lg text-dark-300 mb-10 max-w-2xl mx-auto">Handcrafted with love — from custom t-shirts and tumblers to decals and more. Every piece is made uniquely for you.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#gallery" class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5">
+          View Our Work
+        </a>
+        <a href="#order" class="border-2 border-white/30 hover:border-primary-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-primary-500/10">
+          Place an Order
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+            Crafted With <span class="text-primary-500">Passion</span>
+          </h2>
+          <div class="w-20 h-1 bg-primary-500 mb-8"></div>
+          <p class="text-dark-200 text-lg leading-relaxed mb-6">
+            At KK Creations, every item is designed and crafted with care. Whether it's a personalized gift for a loved one or custom apparel for your team, we bring your vision to life.
+          </p>
+          <p class="text-dark-300 text-lg leading-relaxed mb-8">
+            Using high-quality materials and precision cutting technology, we create one-of-a-kind pieces that stand out. No order is too big or too small — if you can dream it, we can make it.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center p-4 bg-dark-700/50 rounded-xl">
+              <div class="text-3xl font-bold text-primary-500 mb-1">100%</div>
+              <div class="text-dark-300 text-sm">Custom Made</div>
+            </div>
+            <div class="text-center p-4 bg-dark-700/50 rounded-xl">
+              <div class="text-3xl font-bold text-primary-500 mb-1">Premium</div>
+              <div class="text-dark-300 text-sm">Materials</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-dark-700 border border-dark-600">
+            <!-- Replace with an actual photo -->
+            <img src="assets/about-photo.jpg" alt="KK Creations workspace" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-dark-400\'><div class=\'text-center\'><svg class=\'w-16 h-16 mx-auto mb-4 text-primary-500/50\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><p>Add your photo here</p></div></div>';">
+          </div>
+          <!-- Decorative Element -->
+          <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary-500/30 rounded-2xl -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-24 bg-dark-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
+          What We <span class="text-primary-500">Create</span>
+        </h2>
+        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+        <p class="text-dark-300 text-lg max-w-2xl mx-auto">From apparel to accessories, every item is personalized just for you.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card: T-Shirts -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.209-.553-.334-.869-.378l-.738-.105a2 2 0 01-1.024-.518l-.414-.414c-.386-.386-.386-1.012 0-1.398l.534-.534a2 2 0 00.53-.96l.122-.734a1 1 0 00-.23-.837l-.042-.048a1 1 0 00-1.326-.137l-.14.098a2.002 2.002 0 01-2.18.109L8.21 5.766a2 2 0 00-.869-.273l-.226-.017z"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">T-Shirts</h3>
+          <p class="text-dark-400 text-sm">Custom designs on quality tees</p>
+        </div>
+
+        <!-- Product Card: Coffee Mugs -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7V4h16v3M9 20h6M12 4v16m-8-7h3a2 2 0 012 2v1a2 2 0 01-2 2H4V13zm16-2h-3v6h3a2 2 0 002-2v-2a2 2 0 00-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Coffee Mugs</h3>
+          <p class="text-dark-400 text-sm">Start mornings in style</p>
+        </div>
+
+        <!-- Product Card: Tumblers -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 3h8l-1 18H9L8 3zM6 3h12"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Tumblers</h3>
+          <p class="text-dark-400 text-sm">Personalized water bottles & cups</p>
+        </div>
+
+        <!-- Product Card: Decals -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.764m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Decals</h3>
+          <p class="text-dark-400 text-sm">Vinyl stickers & car decals</p>
+        </div>
+
+        <!-- Product Card: Hats -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 17h16M7 17V9a5 5 0 0110 0v8M3 17h18v2H3v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Hats</h3>
+          <p class="text-dark-400 text-sm">Custom caps & beanies</p>
+        </div>
+
+        <!-- Product Card: Bags -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Bags</h3>
+          <p class="text-dark-400 text-sm">Tote bags & backpacks</p>
+        </div>
+
+        <!-- Product Card: Phone Cases -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-dark-700 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-xl flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">Phone Cases</h3>
+          <p class="text-dark-400 text-sm">Protect in style</p>
+        </div>
+
+        <!-- Product Card: Custom -->
+        <div class="product-card group bg-dark-800 rounded-2xl p-6 text-center border border-primary-500/30 hover:border-primary-500 transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-dark-800 to-primary-500/5">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary-500/20 rounded-xl flex items-center justify-center group-hover:bg-primary-500/30 transition-colors">
+            <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-2">& More</h3>
+          <p class="text-dark-400 text-sm">If you can dream it, we can make it</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-24 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
+          Our <span class="text-primary-500">Work</span>
+        </h2>
+        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+        <p class="text-dark-300 text-lg max-w-2xl mx-auto">Browse some of our recent creations. Every piece is custom made with attention to detail.</p>
+      </div>
+
+      <!-- Gallery Filter -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button class="gallery-filter active bg-primary-500 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300" data-filter="all">All</button>
+        <button class="gallery-filter bg-dark-700 text-dark-300 hover:text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300" data-filter="shirts">Shirts</button>
+        <button class="gallery-filter bg-dark-700 text-dark-300 hover:text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300" data-filter="mugs">Mugs</button>
+        <button class="gallery-filter bg-dark-700 text-dark-300 hover:text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300" data-filter="tumblers">Tumblers</button>
+        <button class="gallery-filter bg-dark-700 text-dark-300 hover:text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300" data-filter="decals">Decals</button>
+        <button class="gallery-filter bg-dark-700 text-dark-300 hover:text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300" data-filter="other">Other</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Placeholder gallery items - replace src with actual product photos -->
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="shirts">
+          <img src="assets/gallery/shirt-1.jpg" alt="Custom T-Shirt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Custom T-Shirt</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="mugs">
+          <img src="assets/gallery/mug-1.jpg" alt="Personalized Mug" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Personalized Mug</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="tumblers">
+          <img src="assets/gallery/tumbler-1.jpg" alt="Custom Tumbler" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Custom Tumbler</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="decals">
+          <img src="assets/gallery/decal-1.jpg" alt="Vinyl Decal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Vinyl Decal</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="shirts">
+          <img src="assets/gallery/shirt-2.jpg" alt="Custom T-Shirt" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Custom T-Shirt</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="tumblers">
+          <img src="assets/gallery/tumbler-2.jpg" alt="Custom Tumbler" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Custom Tumbler</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="mugs">
+          <img src="assets/gallery/mug-2.jpg" alt="Personalized Mug" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Personalized Mug</span>
+          </div>
+        </div>
+
+        <div class="gallery-item group relative aspect-square rounded-xl overflow-hidden bg-dark-700 cursor-pointer" data-category="other">
+          <img src="assets/gallery/other-1.jpg" alt="Custom Creation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src=''; this.alt=''; this.parentElement.classList.add('gallery-placeholder');">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-medium">Custom Creation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <p class="text-dark-400 text-sm">More photos coming soon! Follow us on social media for the latest creations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order" class="py-24 bg-dark-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
+          Place Your <span class="text-primary-500">Order</span>
+        </h2>
+        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+        <p class="text-dark-300 text-lg max-w-2xl mx-auto">Ready for something custom? Fill out the form below and we'll get back to you with a quote.</p>
+      </div>
+
+      <form id="order-form" class="bg-dark-800 rounded-2xl p-8 md:p-12 border border-dark-700" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <!-- Honeypot field for spam protection -->
+        <p class="hidden">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+        <input type="hidden" name="form-name" value="order">
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-white font-medium mb-2">Your Name <span class="text-primary-500">*</span></label>
+            <input type="text" id="name" name="name" required
+              class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-dark-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+              placeholder="John Doe">
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-white font-medium mb-2">Email Address <span class="text-primary-500">*</span></label>
+            <input type="email" id="email" name="email" required
+              class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-dark-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+              placeholder="john@example.com">
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label for="phone" class="block text-white font-medium mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+              class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-dark-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+              placeholder="(555) 123-4567">
+          </div>
+
+          <!-- Product Type -->
+          <div>
+            <label for="product" class="block text-white font-medium mb-2">Product Type <span class="text-primary-500">*</span></label>
+            <select id="product" name="product" required
+              class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors">
+              <option value="" class="text-dark-400">Select a product...</option>
+              <option value="t-shirt">T-Shirt</option>
+              <option value="coffee-mug">Coffee Mug</option>
+              <option value="tumbler">Tumbler / Water Bottle</option>
+              <option value="decal">Decal / Sticker</option>
+              <option value="hat">Hat / Cap</option>
+              <option value="bag">Bag / Tote</option>
+              <option value="phone-case">Phone Case</option>
+              <option value="other">Other (describe below)</option>
+            </select>
+          </div>
+
+          <!-- Quantity -->
+          <div>
+            <label for="quantity" class="block text-white font-medium mb-2">Quantity <span class="text-primary-500">*</span></label>
+            <input type="number" id="quantity" name="quantity" min="1" required
+              class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-dark-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+              placeholder="1">
+          </div>
+
+          <!-- Needed By -->
+          <div>
+            <label for="deadline" class="block text-white font-medium mb-2">Needed By</label>
+            <input type="date" id="deadline" name="deadline"
+              class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors">
+          </div>
+        </div>
+
+        <!-- Design Description -->
+        <div class="mt-6">
+          <label for="description" class="block text-white font-medium mb-2">Describe Your Design <span class="text-primary-500">*</span></label>
+          <textarea id="description" name="description" rows="5" required
+            class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-dark-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors resize-none"
+            placeholder="Tell us about your design idea — colors, text, theme, etc. The more detail, the better!"></textarea>
+        </div>
+
+        <!-- File Upload Note -->
+        <div class="mt-4 p-4 bg-dark-700/50 rounded-xl border border-dark-600">
+          <p class="text-dark-300 text-sm">
+            <span class="text-primary-500 font-semibold">Have a design file or reference image?</span><br>
+            Feel free to mention it in your description. We'll follow up via email so you can send us any files.
+          </p>
+        </div>
+
+        <!-- Submit -->
+        <div class="mt-8">
+          <button type="submit"
+            class="w-full bg-primary-500 hover:bg-primary-600 text-white py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 active:scale-[0.98]">
+            Submit Order Request
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Message (hidden by default) -->
+      <div id="form-success" class="hidden bg-dark-800 rounded-2xl p-12 border border-primary-500/30 text-center">
+        <div class="w-20 h-20 mx-auto mb-6 bg-primary-500/20 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-display font-bold text-white mb-3">Order Request Sent!</h3>
+        <p class="text-dark-300 text-lg">Thanks for reaching out! We'll review your request and get back to you within 24-48 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-800 border-t border-dark-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Brand -->
+        <div>
+          <img src="assets/logo.png" alt="KK Creations" class="h-10 mb-4" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <h3 class="text-xl font-display font-bold text-white mb-4 hidden">KK <span class="text-primary-500">Creations</span></h3>
+          <p class="text-dark-400">Custom personalized gifts & apparel. Handcrafted with love, made uniquely for you.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-dark-400 hover:text-primary-500 transition-colors">Home</a></li>
+            <li><a href="#about" class="text-dark-400 hover:text-primary-500 transition-colors">About</a></li>
+            <li><a href="#products" class="text-dark-400 hover:text-primary-500 transition-colors">Products</a></li>
+            <li><a href="#gallery" class="text-dark-400 hover:text-primary-500 transition-colors">Gallery</a></li>
+            <li><a href="#order" class="text-dark-400 hover:text-primary-500 transition-colors">Order Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Social / Contact -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 mb-4">
+            <!-- Instagram -->
+            <a href="#" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors" aria-label="TikTok">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48 6.34 6.34 0 001.86-4.49V8.76a8.26 8.26 0 004.85 1.56V6.79a4.83 4.83 0 01-1.13-.1z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="text-dark-400 text-sm">Follow us for the latest creations and behind-the-scenes content!</p>
+        </div>
+      </div>
+
+      <div class="border-t border-dark-700 mt-8 pt-8 text-center">
+        <p class="text-dark-500 text-sm">&copy; <span id="year"></span> KK Creations. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden bg-dark-900/95 backdrop-blur-sm flex items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-primary-500 transition-colors" aria-label="Close lightbox">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] rounded-xl object-contain">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

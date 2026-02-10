@@ -1,0 +1,5 @@
+# Redirect www to non-www (update domain when ready)
+# https://www.kkcreations.com/* https://kkcreations.com/:splat 301!
+
+# SPA fallback
+/*    /index.html   200
