@@ -220,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createParticles() {
       particles = [];
-      const count = Math.floor((canvas.width * canvas.height) / 12000);
+      const isMobile = window.innerWidth < 768;
+      const count = Math.floor((canvas.width * canvas.height) / (isMobile ? 25000 : 12000));
       for (let i = 0; i < count; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -257,9 +258,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
+          const connectDist = window.innerWidth < 768 ? 80 : 120;
+          if (dist < connectDist) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(220, 38, 38, ${0.1 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(220, 38, 38, ${0.1 * (1 - dist / connectDist)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
