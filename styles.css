@@ -1,42 +1,198 @@
 /* ============================================
    KK Creations - Custom Styles
+   Red & Black Theme with Full Effects
    ============================================ */
 
-/* Smooth scrolling */
+/* ---- CSS Variables ---- */
+:root {
+  --red: #dc2626;
+  --red-bright: #ef4444;
+  --red-glow: #f87171;
+  --red-dark: #991b1b;
+  --dark: #0d0d0d;
+  --darker: #080808;
+}
+
+/* ---- Base ---- */
 html {
   scroll-behavior: smooth;
 }
 
-/* Scrollbar styling */
+/* ---- Custom Scrollbar ---- */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: var(--darker);
 }
 ::-webkit-scrollbar-thumb {
-  background: #404040;
+  background: var(--red);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #dc2626;
+  background: var(--red-bright);
 }
 
-/* ---- Hero Section ---- */
+/* ---- Neon Red Text Glow ---- */
+.red-glow {
+  color: var(--red-bright);
+  text-shadow:
+    0 0 10px var(--red),
+    0 0 40px var(--red),
+    0 0 80px var(--red);
+}
+
+.red-glow-soft {
+  text-shadow:
+    0 0 10px rgba(220, 38, 38, 0.6),
+    0 0 30px rgba(220, 38, 38, 0.3);
+}
+
+/* ---- Animated Gradient Background ---- */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-animate {
+  background: linear-gradient(-45deg, #080808, #1a0505, #0d0d0d, #150808);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* ---- Gradient Border Cards ---- */
+.gradient-border {
+  position: relative;
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--red), var(--red-glow), var(--red));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.gradient-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Floating Animation ---- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ---- Pulse Red Glow (for hero headline) ---- */
+@keyframes pulseRedGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 10px var(--red),
+      0 0 40px var(--red);
+  }
+  50% {
+    text-shadow:
+      0 0 20px var(--red),
+      0 0 60px var(--red),
+      0 0 100px rgba(220, 38, 38, 0.5);
+  }
+}
+
+.animate-pulse-red {
+  animation: pulseRedGlow 2s ease-in-out infinite;
+}
+
+/* ---- Box Glow Animation ---- */
+@keyframes boxGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(220, 38, 38, 0.4), 0 0 80px rgba(220, 38, 38, 0.15);
+  }
+}
+
+.animate-box-glow {
+  animation: boxGlow 2s ease-in-out infinite alternate;
+}
+
+/* ---- Shimmer Effect ---- */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, var(--red-bright), #fff, var(--red-bright));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ---- Section Divider ---- */
+.section-divider {
+  height: 2px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, var(--red), var(--red-glow), var(--red), transparent);
+}
+
+/* ---- Hero Pattern ---- */
 .hero-pattern {
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(220, 38, 38, 0.15) 1px, transparent 0);
   background-size: 40px 40px;
 }
 
 /* ---- Navbar ---- */
 #navbar {
   background: transparent;
+  transition: all 0.3s ease;
 }
 #navbar.scrolled {
-  background: rgba(13, 13, 13, 0.95);
+  background: rgba(8, 8, 8, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.15);
+}
+
+/* ---- Button Glow Effects ---- */
+.btn-red-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-red-glow:hover {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5), 0 0 40px rgba(220, 38, 38, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-outline-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-glow:hover {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3), 0 0 40px rgba(220, 38, 38, 0.1);
+  transform: translateY(-2px);
+  border-color: var(--red) !important;
 }
 
 /* ---- Gallery Placeholders ---- */
@@ -56,7 +212,7 @@ html {
   opacity: 0.3;
 }
 
-/* Gallery item hide/show for filtering */
+/* Gallery item transitions */
 .gallery-item {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -64,23 +220,11 @@ html {
   display: none;
 }
 
-/* ---- Form Select Styling ---- */
-select option {
-  background-color: #1a1a1a;
-  color: #fff;
-}
-
-/* Date input icon color fix for dark theme */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
-}
-
-/* ---- Animations ---- */
+/* ---- Scroll Reveal Animations ---- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -88,20 +232,75 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Stagger delays for product cards */
-.product-card:nth-child(1) { animation-delay: 0.05s; }
-.product-card:nth-child(2) { animation-delay: 0.1s; }
-.product-card:nth-child(3) { animation-delay: 0.15s; }
-.product-card:nth-child(4) { animation-delay: 0.2s; }
-.product-card:nth-child(5) { animation-delay: 0.25s; }
-.product-card:nth-child(6) { animation-delay: 0.3s; }
-.product-card:nth-child(7) { animation-delay: 0.35s; }
-.product-card:nth-child(8) { animation-delay: 0.4s; }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transition: none;
+}
+
+.reveal.active {
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+.reveal.fade-up.active { animation-name: fadeInUp; }
+.reveal.fade-left.active { animation-name: fadeInLeft; }
+.reveal.fade-right.active { animation-name: fadeInRight; }
+.reveal.scale-in.active { animation-name: scaleIn; }
+
+/* Stagger delays */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
+
+/* ---- Form Styling ---- */
+select option {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
 
 /* ---- Lightbox ---- */
 #lightbox {
@@ -114,7 +313,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   pointer-events: auto;
 }
 
-/* ---- Mobile Menu Transition ---- */
+/* ---- Mobile Menu ---- */
 #mobile-menu {
   max-height: 0;
   overflow: hidden;
@@ -124,12 +323,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   max-height: 400px;
 }
 
-/* ---- Focus Styles for Accessibility ---- */
+/* ---- Accessibility Focus ---- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #dc2626;
+  outline: 2px solid var(--red);
   outline-offset: 2px;
+}
+
+/* ---- Particle Canvas ---- */
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
